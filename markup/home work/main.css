@@ -1,0 +1,46 @@
+
+body {
+	background: url(image/03.jpg) repeat
+	}
+
+div {
+	font-family: arial;
+	padding: 10px 100px;
+	margin: 100px;
+	font-size: 30px;
+
+	border: 8px solid black;
+	border-radius: 20px;
+
+	-webkit-box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+	-moz-box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+	box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+
+	background: url(image/02.jpg) repeat
+	}	
+
+
+h1 {
+	font-size: 70px;
+	text-align: center;
+	}
+
+.foto  {
+		border: 8px double black;
+		border-radius: 20px;
+		
+		-webkit-box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+		-moz-box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+		box-shadow: 0px 0px 87px 22px rgba(0,0,0,0.74);
+		display: block;
+		margin: 0 auto;
+		}
+
+.margin {
+		margin-bottom: 90px;
+		}
+
+li {
+	padding: 10px;
+	}
+
