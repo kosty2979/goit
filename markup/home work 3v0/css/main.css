@@ -68,7 +68,7 @@ footer {
 .footer2 {
     display: inline-block;
     height: 42px;
-	width: 150px;
+	padding-right: 20px;
 	line-height: 43px;
 	float: right;
 	color:  #2c2c2c;
