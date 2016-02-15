@@ -132,13 +132,17 @@ nav {
 
 
 .content1 {
+	position: relative;
 	border: 1px solid #dbdbdb ;
 	box-shadow: 0px 0px 8px 0px rgba(219,219,219,1);
     height: 400px;
 	}
 
 .con {display: block;
-    margin: 50px auto;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 	}
 
 p {
