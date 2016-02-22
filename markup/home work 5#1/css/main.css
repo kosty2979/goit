@@ -11,11 +11,18 @@ div {
 
 td {
 	border: 10px solid black;
-	width: 100px;
-	height:65px;
+	width: 65px;
+	
 }
+tr {
+	height:65px;
 
-
+}
+.u {
+	height:35px;}
+.u td {
+	width: 120px;
+}
 table {
 	border: 12px solid white;
 	margin: 0 auto;
@@ -36,4 +43,7 @@ table {
 
 .col_black {
 	background-color: black;
+}
+.col_black1 {
+	background-color: #222222;
 }
