@@ -1,0 +1,39 @@
+body {
+	background-color: blue;
+}
+div {
+	background-color: white;
+	border: 6px solid grey;
+	border-radius: 5px;
+	margin: 10%;
+	padding: 100px  10px;
+}
+
+td {
+	border: 10px solid black;
+	width: 100px;
+	height:65px;
+}
+
+
+table {
+	border: 12px solid white;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+.col_yellow {
+	background-color: yellow;
+}
+
+.col_red {
+	background-color: red;
+}
+
+.col_blue {
+	background-color: blue;
+}
+
+.col_black {
+	background-color: black;
+}
