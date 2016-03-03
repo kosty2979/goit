@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+.cont, .padd-top {
+	max-width: 728px;
+	padding: 0 20px;
+	
+}
+
+.top-head-nav {	
+	float: left;
+	text-align: left;
+}
+.top-head-logo{
+	float: none;
+	display: block;
+	margin: 0 auto;
+}
+
+.text--head .text__other-line{
+	display: none;
+}
+.grey-text--left{
+	display: none;
+}
+.grey-text--left-ghost{
+	display: inline-block;
+}
+
+}
+
