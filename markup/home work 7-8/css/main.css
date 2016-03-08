@@ -223,7 +223,7 @@ html, body {
 	width: 23.6%;
 	position: relative;
 	text-align: left;
-	margin: 7.8% 0px 0 15px ;
+	margin: 7.8% 0px 7% 15px ;
 	padding: 0 0 0 49px;
 }
  .blue-text__second-line{
@@ -249,7 +249,7 @@ html, body {
 	color: #fff;
 	font-size: 18px;
 	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);
-	margin: 25px 10px 29% 0;
+	margin: 25px 10px 0 0;
 	text-decoration: none;
 }
 .blue-text__link:hover {
