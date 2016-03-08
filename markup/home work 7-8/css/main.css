@@ -34,75 +34,80 @@ html, body {
 }
 .clearfix:after {
 	content: ""; 
-   display: block;
-   height: 0;
-   clear: both;
+	display: block;
+	height: 0;
+	clear: both;
 }
+
 /*-----background---*/
-.body__background{
-	width: 100%
+.background_image {
+	width: 100%;
+	background: url("../img/bg.jpg") no-repeat top  center;
+	padding-bottom: 12.7%; 
+
 }
 
-.body__background--image {
-	background: url("../img/bg.jpg") no-repeat top  center ;  	
-}
-
-.body__background--blue {
-	  background: #322539;
+.background_blue {
+	width: 100%;
+	background: #322539;
 	background: linear-gradient(to top, #322539, #745083);
 	border-top: 1px solid #33253a;
 	border-bottom: 1px solid #1d2f37;
 }
-.body__background--white {
-	 background: #f9f9f9;
+.background_white {
+	width: 100%;
+	background: #f9f9f9;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #e6e6e6;
 }
-.body__background--white2{
+.background_white2{
+	width: 100%;
 	background: #f9f9f9;
 	border-top: 1px solid #fefefe;
 	border-bottom: 1px solid #d8d8d8;
 }
-.body__background--grey {
+.background_grey {
+	width: 100%;
 	background: #ececec;	
 } 
-.body__background--transp {
+.background_transp {
+	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
 	margin-top: 11.5%;
-	margin-bottom: 6.8%;
 }
-.body__background--foot {
-	background: url("../img/bgfoot.jpg") no-repeat top  center ;
+.background_foot {
+	width: 100%;
+	background: url("../img/bgfoot.jpg") no-repeat center ;
+ 	background-size: cover; 
 }
-.cont {
+.conteiner {
 	text-align: center;
 	margin: 0 auto;	
 	max-width: 960px;
 }
 
 /*-----header---*/
-.padd-top {
-	padding-top: 3.8%;
-}
-.top-head-logo {
+
+.header-logo {
 	float: left;
 	display: inline-block;
+	padding-top: 5.5%;
 }
-
-
-.top-head-nav {
+.nav {
 	display: block;
 	margin: 22px 0;
-	
+	padding-top: 5%;
 	float: right;
+}
+.small {
+	display: none;
 }
 .menu__item{
 	display: inline-block;
 	margin-left: 43px;
 } 
-.menu .menu__item:first-child{
+.menu__item:first-child{
 	margin-left: 0px;
-
 }
 .menu__link{
 	display: inline-block;
@@ -127,46 +132,41 @@ html, body {
 	position: absolute;
 	top: 36%;
 	left:55%;
-	width: 35px;
-	height: 40px;
+	width: 28px;
+	height: 36px;
 	background: url(../img/st.png);
-	background-position: 0px 0px;
+	background-position: 0px -6px;
 }
 .but-right {
 	display: block;
 	position: absolute;
 	top: 36%;
 	right:0px;
-	width: 35px;
-	height: 40px;
+	width: 28px;
+	height:36px;
 	background: url(../img/st.png);
-	background-position: 0px 45px;
+	background-position: 0px 43px;
 }
-
-.text {
+.text-head {
 	display: inline-block;
 	float: left;
 	text-align: left;	
-
-}
-.text--head {
 	margin-top: 8%;	
 	width:  54.1% ;
 }
-.text--head .text__first-line {
+.text-head__first-line {
 	font-family:"LeagueGothic";
 	font-size: 60px;
 	color: #ffffff;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.text--head .text__second-line {
+.text-head__second-line {
 	font-family:"LeagueGothic";
 	font-size: 32px;
 	color: #edbfff;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
-
-.text--head .text__other-line {
+.text-head__other-line {
 	font-family:"Open Sans Light";
 	font-size: 18px;
 	color: #ffffff;
@@ -201,10 +201,9 @@ html, body {
 /*-----link-----*/
 	
 .slide-link {
-	float: right;
-}
-.slide-link--head {
-	margin: 0 16.5% 6% 0;
+	position: absolute;
+	right: 16.5%;
+	bottom: -15%
 }
 .slide-link__link {display: inline-block;
 	height: 10px;
@@ -219,22 +218,20 @@ html, body {
 	background: #fff;
 }
 /*------------blue line--------*/
-.main-text {
+.blue-text {
 	display: inline-block;
 	width: 23.6%;
 	position: relative;
 	text-align: left;
 	margin: 7.8% 0px 0 15px ;
 	padding: 0 0 0 49px;
-
 }
- .main-text__second-line{
+ .blue-text__second-line{
  	color: #fff;
  	font-size: 30px;
 	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);
-
 }
-.main-text__other-line{
+.blue-text__other-line{
 	font-size: 16px;
 	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);	
 	font-family:"Open Sans Light";
@@ -246,7 +243,7 @@ html, body {
 	height: 118px;
 	overflow: hidden;
 } 
-.main-text__link {
+.blue-text__link {
 	display: inline-block;
 	float: right;
 	color: #fff;
@@ -255,43 +252,35 @@ html, body {
 	margin: 25px 10px 29% 0;
 	text-decoration: none;
 }
-
-.main-text__link:hover {
+.blue-text__link:hover {
   text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
 }
-
-.main-text--blue--left{
-	float: left;
-	
+.blue-text--left{
+	float: left;	
 }
-.main-text__img {
+.blue-text__img {
  	position: absolute;
 	content: "";
-	 display: inline-block;
+	display: inline-block;
 	background: url(../img/sp1.png);
-	 width: 32px;
-	 height: 32px;
+	width: 32px;
+	height: 32px;
 	top: 6px;
 	left:0px;
 }
-
-.main-text--blue--right {
+.blue-text--right {
 	float: right;
 	}
-.main-text--blue--right .main-text__img {
+.blue-text--right .blue-text__img {
 	background-position:  32px ;
 }
-
- 	 
-
-.main-text--blue--center .main-text__img  {
+.blue-text--center .blue-text__img  {
 	background-position: 64px ;
 }
 
 
 /*------------white line--------*/
 .slide-text {
-
 	display: inline-block;
 	position: relative;
 	float: left;
@@ -302,14 +291,13 @@ html, body {
 	margin-bottom: 11.9%;
 	padding: 0 10px 35px 40px;
 	text-align: left;
+  	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
 }
-
 .slide-text__second-line {
   font-size: 30px;
   font-family: "League Gothic";
   color: rgb(69, 69, 69);
   text-transform: uppercase;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
   margin-top: 30px;
 }
 .slide-text__span{
@@ -322,14 +310,12 @@ html, body {
 	height: 168px;
 	overflow: hidden;
 	color:#454545;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-  margin-top: 10px;
+  	margin-top: 10px;
 }
-
 .slide-text__img{
 	position: absolute;
-	 width: 49px;
-	 height: 51px;
+	width: 49px;
+	height: 51px;
 	background: url(../img/Layer2.png);
 	top: 20px;
 	left:-22px;
@@ -354,71 +340,69 @@ html, body {
 	border-radius: 12px;
 	background: #000;
 }
-
-
-.text-white {
+.text-wrap {
 	display: inline-block;
 	float: right;
 	width: 47%;
 	margin-top: 10.5%;
 	text-align: left;
 }
-.slide-text-right{
+.small-text{
 	position: relative;
 	padding-left: 66px;
-	margin-top: -10px
-	
+	margin-top: -8px	
 }
-.text-white-head {
-  font-size: 30px;
-  font-family: "League Gothic";
-  color: rgb(69, 69, 69);
-  text-transform: uppercase;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-  margin-top: 30px;
-  margin-bottom: 0px;
-
+.text-wrap-head {
+	font-size: 30px;
+	font-family: "League Gothic";
+	color: rgb(69, 69, 69);
+	text-transform: uppercase;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-top: 30px;
+	margin-bottom: 0px;
 }
-
-.slide-text-right__second-line {
-  font-size: 16px;
-  font-family: "Open Sans Extrabold";
-  color: rgb(69, 69, 69);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-  margin-top: 30px;
+.small-text__second-line {
+	font-size: 16px;
+	font-family: "Open Sans Extrabold";
+	color: rgb(69, 69, 69);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-top: 30px;
 }
-
-.slide-text-right__other-line {
+.small-text__other-line {
 	font-family:"Open Sans Light";
 	font-size: 16px;
 	line-height: 24px;
 	color:#454545;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-  margin-top: 5px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+	margin-top: 5px;
+	height: 22px;
+	overflow: hidden;
 }
-
-.slide-text-right__img{
+.small-text__img{
 	position: absolute;
-	 width: 49px;
-	 height: 49px;
+	width: 49px;
+	height: 49px;
 	background: url(../img/sp2.png);
 	top: -5px;
 	left:2px;
 }
-.text-white__link {
+.small-text__link {
 	display: inline-block;
 	float: right;
-  color: rgb(69, 69, 69);
+  	color: rgb(69, 69, 69);
 	font-size: 18px;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+  	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
 	margin: 22px 22px 0 0;
 	text-decoration: none;
 }
-
-.slide-text-right--2 .slide-text-right__img{
+.small-text__link--ghost{
+	margin-right: 8px;
+	display: none;
+}
+.small-text--2 .small-text__img{
 	background-position: 97px 0px;
 }
-.slide-text-right--3 .slide-text-right__img{
+.small-text--3 .small-text__img{
 	background-position: 48px 0px;
 }
 
@@ -482,10 +466,6 @@ html, body {
 }
 
 /*-----grey line----*/
-
-		
-
-
 .grey-text {
 	margin-top: 10%;
 	margin-bottom: 9.2%;
@@ -502,10 +482,7 @@ html, body {
 }
 .grey-text__span {
   color: rgb(185, 185, 185);
-
 }
-
-
 .grey-text__second-line {
   font-size: 16px;
   font-family: "Georgia";
@@ -514,9 +491,6 @@ html, body {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
   margin-bottom: 12px;
 }
-
-
-
 .grey-text__other-line {
 	font-family:"Open Sans Light";
 	font-size: 16px;
@@ -527,47 +501,46 @@ html, body {
 	margin-top: 5px;
 	height: 122px;
 	overflow: hidden;
-
 }
 .grey-text--left-ghost{
 	display: none;
 	float: left;
 }
+.grey-text--center-ghost{
+	display: none;
+}
 .grey-text--left {
 	float: left;
-}
-.grey-text--center {
-/* 	margin-left: 5%; */
 }
 .grey-text--left-ghost .grey-text__first-line {
   font-size: 30px;
   color: rgb(69, 69, 69);
-
+}
+.grey-text--center-ghost .grey-text__first-line {
+  font-size: 30px;
+  color: rgb(69, 69, 69);
 }
 
 .grey-text--left-ghost .grey-text__other-line {
   height: 167px;
 }
+.grey-text--center-ghost .grey-text__other-line {
+  height: 167px;
+}
 .grey-text--center .grey-text__first-line {
   font-size: 30px;
   color: rgb(69, 69, 69);
-
 }
-
 .grey-text--center .grey-text__other-line {
   height: 167px;
 }
-
 .grey-text--right {
-	
 	float: right;
 }
 .grey-text--right .grey-text__first-line {
   font-size: 30px;
   color: rgb(69, 69, 69);
-
 }
-
 .grey-text--right .grey-text__other-line {
   height: 167px;
 }
@@ -576,36 +549,29 @@ html, body {
 
 .footer {
 	 padding-top: 45px;
-	 padding-bottom:40px;
-	
+	 padding-bottom:40px;	
 }
 .nav-foot {
 	float: left;
-	
 	text-align: left;
 }
 .menu--footer .menu__item{
-
 	margin: 0 40px 0 0;
-
 }
 .menu--footer .menu__link{
 	font-size: 20px;
 	padding: 0;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
-
 .nav__par{
-	
 	float: right;
 	font-size: 12px;
 	color: #fff;
 	font-family: "Open Sans Light";
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-	 margin-top: 10px;
+	margin-top: 10px;
 }
 .nav__span{
-	
 	font-family: "Open Sans Extrabold";
 }
 
