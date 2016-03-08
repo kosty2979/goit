@@ -195,7 +195,7 @@ html, body {
 	background-position: -35px ;
 }
 .head-pic__img {
-	max-height: auto;
+	height: auto;
 	max-width: 100%;
 }
 /*-----link-----*/
