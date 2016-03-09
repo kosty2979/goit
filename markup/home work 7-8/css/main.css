@@ -29,7 +29,7 @@
 
 html, body {
 	
-	font-family:"LeagueGothic";
+	font-family:"LeagueGothic", arial, sans-serif;
 	
 }
 .clearfix:after {
@@ -155,19 +155,19 @@ html, body {
 	width:  54.1% ;
 }
 .text-head__first-line {
-	font-family:"LeagueGothic";
+	font-family:"LeagueGothic", arial, sans-serif;
 	font-size: 60px;
 	color: #ffffff;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .text-head__second-line {
-	font-family:"LeagueGothic";
+	font-family:"LeagueGothic", arial, sans-serif;
 	font-size: 32px;
 	color: #edbfff;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .text-head__other-line {
-	font-family:"Open Sans Light";
+	font-family:"Open Sans Light", arial, sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	line-height: 24px;
@@ -234,7 +234,7 @@ html, body {
 .blue-text__other-line{
 	font-size: 16px;
 	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);	
-	font-family:"Open Sans Light";
+	font-family:"Open Sans Light", arial, sans-serif;
 	margin-top: 9px;
 	color: #ffffff;
 	line-height: 24px;
@@ -295,7 +295,7 @@ html, body {
 }
 .slide-text__second-line {
   font-size: 30px;
-  font-family: "League Gothic";
+  font-family: "LeagueGothic", arial, sans-serif;
   color: rgb(69, 69, 69);
   text-transform: uppercase;
   margin-top: 30px;
@@ -304,7 +304,7 @@ html, body {
 	color: #edbfff;
 }
 .slide-text__other-line {
-	font-family:"Open Sans Light";
+	font-family:"Open Sans Light", arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	height: 168px;
@@ -363,13 +363,13 @@ html, body {
 }
 .small-text__second-line {
 	font-size: 16px;
-	font-family: "Open Sans Extrabold";
+	font-family: "Open Sans Extrabold", sans-serif;
 	color: rgb(69, 69, 69);
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
 	margin-top: 30px;
 }
 .small-text__other-line {
-	font-family:"Open Sans Light";
+	font-family:"Open Sans Light", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	color:#454545;
@@ -474,7 +474,7 @@ html, body {
 	text-align: left;	
 }
 .grey-text__first-line {
-	font-family:"LeagueGothic";
+	font-family:"LeagueGothic", arial, sans-serif;
 	font-size: 48px;
 	color: #454545;
 	margin-bottom: 13px;
@@ -492,7 +492,7 @@ html, body {
   margin-bottom: 12px;
 }
 .grey-text__other-line {
-	font-family:"Open Sans Light";
+	font-family:"Open Sans Light", arial, sans-serif;
 	font-size: 16px;
   color: rgb(120, 120, 120);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
@@ -567,12 +567,12 @@ html, body {
 	float: right;
 	font-size: 12px;
 	color: #fff;
-	font-family: "Open Sans Light";
+	font-family: "Open Sans Light", arial, sans-serif;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 	margin-top: 10px;
 }
 .nav__span{
-	font-family: "Open Sans Extrabold";
+	font-family: "Open Sans Extrabold", arial, sans-serif;
 }
 
 
