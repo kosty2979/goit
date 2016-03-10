@@ -61,6 +61,9 @@ margin-top: 50px;
 .but-right {
 	top: 46%;
 	right:0px; 
+}
+.slide-link {
+	bottom:-60px;
 }	
 
 /*--blue line--*/

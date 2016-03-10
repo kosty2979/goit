@@ -43,7 +43,7 @@ html, body {
 .background_image {
 	width: 100%;
 	background: url("../img/bg.jpg") no-repeat top  center;
-	padding-bottom: 12.7%; 
+	padding-bottom: 167px; 
 
 }
 
@@ -73,7 +73,7 @@ html, body {
 .background_transp {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.2);
-	margin-top: 11.5%;
+	margin-top:157px;
 }
 .background_foot {
 	width: 100%;
@@ -203,8 +203,7 @@ html, body {
 .slide-link {
 	position: absolute;
 	right: 16.5%;
-	bottom: -15%
-}
+	bottom:-110px;}
 .slide-link__link {display: inline-block;
 	height: 10px;
 	width: 10px;
