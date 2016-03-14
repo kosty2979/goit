@@ -13,7 +13,7 @@ for ( i = 0; i < 5 ; i++) {
 
 var logName = prompt( 'введите  свое имя' );
 
-if (logName.length == 0 || typeof(logName)=='undefined' || name=='null' ) {
+if (logName.length == 0 || typeof(logName)=='undefined' || logName=='null' ) {
 		alert( 'неправильное имя');
 	}
 
