@@ -1,40 +1,53 @@
 var timer = {
 
 	body: document.body,
+	div: "",
+	divForm: "",
+	form: "",
+	par: "",
+
+	butSplit: "",
+	butReset: "",
+	butStart: "",
+
+	beginTime: "",
+	startDate: "",
+	dispText: "",
+
 	starter: 0,
 	oldTime: 0,
 	countTimeLine: 1,
 	reset: 0,
 
 	createDiv:function () {		
-		div = document.createElement( 'div');
-		this.body.appendChild( div );
-		div.className = 'wrapper';	
+		this.div = document.createElement( 'div');
+		this.body.appendChild( this.div );
+		this.div.className = 'wrapper';	
 	},
 
 	createDivForm:function () {		
-		divForm = document.createElement( 'div');
-		form.appendChild( divForm );
-		divForm.className = 'divForm';	
+		this.divForm = document.createElement( 'div');
+		this.form.appendChild( this.divForm );
+		this.divForm.className = 'divForm';	
 	},
 
 	createForm:function () {
-		form = document.createElement( 'form');
-		form.className = "form";
-		div.appendChild( form );
-		form.action = '#';
+		this.form = document.createElement( 'form');
+		this.form.className = "form";
+		this.div.appendChild( this.form );
+		this.form.action = '#';
 	},
 
 	createPar: function  () {
-		par = document.createElement( 'p' );
-		form.appendChild( par );
-		par.className = "clock";
-		par.innerHTML = "00:00:00.000";
+		this.par = document.createElement( 'p' );
+		this.form.appendChild( this.par );
+		this.par.className = "clock";
+		this.par.innerHTML = "00:00:00.000";
 	},
 
 	createTimeLine: function  ( name, value ) {
-		timeLine = document.createElement( 'p' );
-		divForm.insertBefore( timeLine, divForm.firstChild );
+		var timeLine = document.createElement( 'p' );
+		this.divForm.insertBefore( timeLine, this.divForm.firstChild );
 		/*divForm.appendChild( timeLine );*/
 		timeLine.className = "timeLine";
 		var a = this.countTimeLine + ". " + name+ " " + value ;
@@ -47,7 +60,7 @@ var timer = {
 		button.type = "button";
 		button.value = butLabel;
 		button.className = "button";
-		form.appendChild( button );
+		this.form.appendChild( button );
 	},
 
 	calculationTime: function (t) {
@@ -67,22 +80,22 @@ var timer = {
 		if ( s < 10 ) s = '0' + s;
 		if ( ms < 100 ) ms = '0' + ms;
 		if ( ms < 10 ) ms = '0' + ms;
-
-		return w = h + ':' + m + ':' + s + '.' + ms;
+		var w = h + ':' + m + ':' + s + '.' + ms;
+		return w ;
 
 	},
 
 	startTime: function (startTime) { 
  	if (timer.reset == 0){
 		var realDate = new Date();
-		beginTime = realDate.getTime() - startDate.getTime();
-		t = beginTime + startTime;
+		this.beginTime = realDate.getTime() - timer.startDate.getTime();
+		var t = this.beginTime + startTime;
 
-		dispText = this.calculationTime( t );
+		this.dispText = this.calculationTime( t );
 		
 			if ( timer.starter == 1 ) {
 		
-					par.innerHTML = dispText;
+					this.par.innerHTML = this.dispText;
 					setTimeout( "timer.startTime(timer.oldTime)", 20 );
 		
 					} else {
@@ -98,22 +111,22 @@ var timer = {
  
 
 	startStop: function () {
-		 butStart = form.querySelector( 'input' );
-		 butStart.addEventListener( 'click', start );
+		 timer.butStart = this.form.querySelector( 'input' );
+		 timer.butStart.addEventListener( 'click', start );
 
 		function start () { 
 				timer.reset = 0;
 			if ( timer.starter==0 ){
-				butStart.value = "STOP";
+				timer.butStart.value = "STOP";
 				timer.starter=1;
 
-				startDate = new Date();
+				timer.startDate = new Date();
 				timer.startTime( timer.oldTime );
 			}else{
-				butStart.value = "START";
+				timer.butStart.value = "START";
 				timer.starter=0;
 
-				dispText2 = timer.calculationTime( beginTime );
+				var dispText2 = timer.calculationTime( timer.beginTime );
 				timer.createTimeLine( "Stop", dispText2 );
 				}
 		};
@@ -123,21 +136,18 @@ var timer = {
 
 	resetAll: function () {
    
-		butReset = form.querySelectorAll( 'input' );
- 		butReset[2].addEventListener( 'click', reset );
+		timer.butReset = this.form.querySelectorAll( 'input' );
+ 		timer.butReset[2].addEventListener( 'click', reset );
 
 			function reset () {
 				timer.reset = 1; 
 				timer.starter = 0;
 				timer.countTimeLine = 1;
-				beginTime=0;
-				startTime=0;
-				t=0;
-				form.removeChild( divForm );
-				butStart.value = "START"
+				timer.form.removeChild( timer.divForm );
+				timer.butStart.value = "START"
 				timer.createDivForm();
-				dispText= "00:00:00.000";
-				par.innerHTML = dispText;
+				var resetText= "00:00:00.000";
+				timer.par.innerHTML = resetText;
 				timer.oldTime = 0;
 
 			}
@@ -145,12 +155,12 @@ var timer = {
 	},
 	split: function () {
 
-		butReset = form.querySelectorAll( 'input' );
- 		butReset[1].addEventListener( 'click', sp );
+		timer.butSplit = this.form.querySelectorAll( 'input' );
+ 		timer.butSplit [1].addEventListener( 'click', sp );
 
 			function sp () {
 			if ( timer.starter == 1 ) { 
-				timer.createTimeLine( "Split", dispText );
+				timer.createTimeLine( "Split", timer.dispText );
 				}
 			}
 	},
