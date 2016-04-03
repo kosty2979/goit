@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'diavlo';
+    src: url('../fonts/diavlo_bold_ii_37-webfont.eot');
+    src: url('../fonts/diavlo_bold_ii_37-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/diavlo_bold_ii_37-webfont.woff2') format('woff2'),
+         url('../fonts/diavlo_bold_ii_37-webfont.woff') format('woff'),
+         url('../fonts/diavlo_bold_ii_37-webfont.ttf') format('truetype'),
+         url('../fonts/diavlo_bold_ii_37-webfont.svg#diavlobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'diavlo';
+    src: url('../fonts/diavlo_light_ii_37-webfont.eot');
+    src: url('../fonts/diavlo_light_ii_37-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/diavlo_light_ii_37-webfont.woff2') format('woff2'),
+         url('../fonts/diavlo_light_ii_37-webfont.woff') format('woff'),
+         url('../fonts/diavlo_light_ii_37-webfont.ttf') format('truetype'),
+         url('../fonts/diavlo_light_ii_37-webfont.svg#diavlolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	font-family: "diavlo", arial;
+}
+
+.wrapper {
+	width:80%;
+	margin: 30px auto;
+	padding: 50px;
+	border: 2px solid #999;
+	background-color: #fff;
+	border-radius: 6px;
+	box-shadow:  inset -1px -1px 10px 2px rgba(50, 50, 50, 0.78);
+}
+
+.tabs {
+	padding:10px 10px 0;
+	background-color: #00cccc;
+	background: linear-gradient(121deg, rgb(0, 159, 168) 28%, rgb(90, 237, 209) 70%);
+	border: 1px solid #999;
+	margin:0;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	box-shadow:-1px -1px 8px 0px rgba(50, 50, 50, 0.78);
+}
+
+.tab{
+	display:inline-block;
+	border: 1px solid #999;
+	border-bottom: none;
+	background-color: #b3ffff;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	cursor: pointer;
+	line-height: 25px;
+	font-size:16px;
+	padding:0 5px;
+	margin-bottom: -1px;
+	text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+}
+
+.tab:hover  {
+	background:  #00e6e6;
+}
+
+.tabs .tab-active {
+    background: #e6ffff;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+    border-bottom: none;
+ }
+
+img {
+	float: left; 
+	margin: 10px;
+	width: 320px;
+	height: 240px;
+}
+
+.divTab{
+	padding: 20px;
+	line-height: 1.8;
+	letter-spacing: 2;
+	display: none;
+	background: #e6ffff;
+	border: 1px solid #999;
+	border-top: none;
+	box-shadow:-1px -1px 8px 0px rgba(50, 50, 50, 0.78);
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+}
+
+.content-active {
+	display: block;
+
+}
+
+/* ______________form_____________ */
+.wrapForm {
+	width: 80%;
+	margin:50px auto;
+	padding:20px;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow:  inset -1px -1px 10px 2px rgba(50, 50, 50, 0.78),-1px -1px 8px 0px rgba(50, 50, 50, 0.78);
+
+}
+
+.line {
+	  height: 50px;
+	  line-height: 50px;
+}
+
+.line label {
+	display: inline-block;
+	width: 80px;
+}
+
+input {
+	border: 2px solid gray;
+	border-radius: 5px;
+	padding-left: 5px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+
+.tip {
+
+	display: none; 
+	margin-left:20px;
+	padding-left: 20px;
+	width: 280px;
+	line-height: 30px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: #eee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.button {
+	background-color: #b3ffff;
+	background: linear-gradient(121deg, rgb(0, 159, 168) 28%, rgb(90, 237, 209) 70%);
+	border: 2px solid #999;
+	border-radius: 5px;
+	width: 80px;
+	letter-spacing: 3px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+
+.button:hover  {
+	background:  #00e6e6;
+	background: linear-gradient(121deg, rgb(90, 237, 209) 28%, rgb(0, 159, 168) 70%);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
