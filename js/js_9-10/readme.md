@@ -1,7 +1,7 @@
 # Урок 9-10
 
 Домашнее задание:
-[решение]{http://kosty2979.github.io/js/js_9-10/js_9-10.html}
+[решение](http://kosty2979.github.io/js/js_9-10/js_9-10.html)
 
 1. Создать страницу, к ней подключить [карусель](http://sorgalla.com/jcarousel/)
 2. К той же странице подключить любой, понравившийся вам нестандартный `select` из [списка](http://habrahabr.ru/company/aiken/blog/114927/). Если лень выбирать - подключайте [cuSel](http://www.xiper.net/collect/html-and-css-tricks/verstka-form/nice-select-jquery.html)
