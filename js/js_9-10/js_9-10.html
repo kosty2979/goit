@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<!-- 	<link rel="stylesheet" href="css/reset.css"> -->
+	<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript" src="js/jquery.color.js"></script>
+	<script id="tpl1" type="gfgg-hhh">
+		<li><img src="http://lorempicsum.com/{{dir}}/{{res}}/{{num}}" alt=""></li>
+	</script>
+	<script src="js/jquery.jcarousel.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<nav class="clearfix">
+		<ul class="menu ">
+			<li class="menu-item"><a href="#">Пункт 1</a></li>
+			<li class="menu-item"><a href="#">Пункт 2</a></li>
+			<li class="menu-item dropdown "><a href="#">Пункт 3</a>
+				<ul class="submenu">
+					<li class="submenu-item"><a href="#">Подпункт 3.1</a></li>
+					<li class="submenu-item"><a href="#">Подпункт 3.2</a></li>
+					<li class="submenu-item"><a href="#">Подпункт 3.3</a></li>
+					<li class="submenu-item dropright "> <a href="#">Подпункт 3.4</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Подпункт 3.4.1</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 3.4.2</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 3.4.3</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 3.4.4</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 3.4.5</a></li>
+						</ul>		
+					</li>
+					<li class="submenu-item"><a href="#">Подпункт 3.5</a></li>
+				</ul>	
+			</li>
+			<li class="menu-item"><a href="#">Пункт 4</a></li>
+			<li class="menu-item dropdown"><a href="#">Пункт 5</a>
+				<ul class="submenu">
+					<li class="submenu-item"><a href="#">Подпункт 5.1</a></li>
+					<li class="submenu-item"><a href="#">Подпункт 5.2</a></li>
+					<li class="submenu-item dropright"><a href="#">Подпункт 5.3</a>
+						<ul class="submenu ">
+							<li class="submenu-item"><a href="#">Подпункт 5.3.1</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 5.3.2</a></li>
+							<li class="submenu-item dropright"><a href="#">Подпункт 5.3.3</a>
+								<ul class="submenu ">
+									<li class="submenu-item"><a href="#">Подпункт 5.3.3.1</a></li>
+									<li class="submenu-item"><a href="#">Подпункт 5.3.3.2</a></li>
+									<li class="submenu-item"><a href="#">Подпункт 5.3.3.3</a></li>
+									<li class="submenu-item"><a href="#">Подпункт 5.3.3.4</a></li>
+									<li class="submenu-item"><a href="#">Подпункт 5.3.3.5</a></li>
+								</ul>
+							</li>
+							<li class="submenu-item"><a href="#">Подпункт 5.3.4</a></li>
+							<li class="submenu-item"><a href="#">Подпункт 5.3.5</a></li>
+						</ul>
+					</li>
+					<li class="submenu-item"><a href="#">Подпункт 5.4</a></li>
+				</ul>	
+			</li>
+			<li class="menu-item"><a href="#">Пункт 6</a></li>
+		</ul>	
+	</nav>
+
+	<form  action="#" class="createCar clearfix ">
+		<p class="par">Выберете тему картинок</p>
+		<select class="theme">
+			<option  disabled>-- Выберите тему--</option>
+			<option selected value="nemo">nemo</option>
+			<option value="futurama">futurama</option>
+			<option value="rio">rio</option>
+			<option value="simpsons">simpsons</option>
+			<option value="up">up</option>
+			
+		</select>
+		<p>Выберете разрешение картинок</p>
+		<select class="resolut">
+			<option  disabled>-- разрешение--</option>
+			<option selected value="350/200">350*200</option>
+			<option value="627/300">627*300</option>
+			<option value="627/200">627*300</option>
+
+			
+		</select>
+		<p>Выберете количество картинок</p>
+		<select class="number">
+			<option  disabled>-- количество--</option>
+			<option selected value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+
+			
+		</select>
+		<p><button  class="create styler">Создать</button></p>
+	</form>
+
+	<div class="wrapper">
+
+		<div class="jcarousel-wrapper ">
+			<div class="jcarousel">
+				<ul>
+
+				</ul>
+			</div>
+
+
+
+			<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+			<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+			<p class="jcarousel-pagination">
+
+			</p>
+		</div>
+	</div>
+
+	<div class="wrappercheck ">
+		<h1>Чек бокс на js</h1>
+		<form action="#" class="fornCheckJs">
+			<p>
+			<input class="niceCheck" type="checkbox" id="t-check1" >
+			<label  for="t-check1">Чекбокс 1:</label>
+		</p>
+		<p>
+			<input class="niceCheck" type="checkbox" id="t-check2" >
+			<label  for="t-check2">Чекбокс 2:</label>
+		</p>
+		<p>
+			<input class="niceCheck" type="checkbox" checked disabled id="t-check3 " >
+			<label  for="t-check3">Чекбокс 3:</label>
+		</p>
+		</form>
+	</div>
+	<div class="wrappercheck2 c">
+		<h1>Чек бокс на css</h1>
+		<form action="#" >
+		<p>
+			<input class="checkCss" type="checkbox" id="test-check1" >
+			<label class="lbCheckCss" for="test-check1">Чекбокс 1:</label>
+		</p>
+		<p>
+			<input class="checkCss" type="checkbox" id="test-check2" >
+			<label class="lbCheckCss" for="test-check2">Чекбокс 2:</label>
+		</p>
+		<p>
+			<input class="checkCss" type="checkbox" checked disabled id="test-check3" >
+			<label class="lbCheckCss" for="test-check3">Чекбокс 3:</label>
+		</p>
+
+		</form>
+		
+	</div>
+
+</body>
+</html>
