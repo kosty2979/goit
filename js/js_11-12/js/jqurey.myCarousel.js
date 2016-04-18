@@ -16,20 +16,28 @@
     var currentLeftValue = 0;
     var minimumOffset = - ((elementsCount-1) * picWidht);
     var maximumOffset = 0;
+    getLeft.hide(400)
 
- 
     getLeft.click(function() {        
         if (currentLeftValue != maximumOffset) {
+        	getRigh.show(400);
             currentLeftValue += picWidht;
             elementsList.animate({ left : currentLeftValue + "px"}, time);
-        }        
+        } 
+        if (currentLeftValue == maximumOffset){
+        	getLeft.hide(400)
+        }
     });
  
     getRigh.click(function() {        
         if (currentLeftValue != minimumOffset) {
+        	getLeft.show(400);
             currentLeftValue -= picWidht;
             elementsList.animate({ left : currentLeftValue + "px"}, time);
-        }        
+        }  
+        if (currentLeftValue == minimumOffset){
+        	getRigh.hide(400)
+        }     
     });
 
     return this;
