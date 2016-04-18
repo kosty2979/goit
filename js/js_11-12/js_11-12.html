@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Home work JS 11-12</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-2.2.2.js" type="text/javascript"></script>
+	<script src="js/lodash.js" type="text/javascript"></script>
+	<script src="js/jqurey.myCarousel.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+	<script type="text/template" id="template">
+			<div class="carousel-wrapper">
+		  	 <ul>
+		    	<% thems.forEach(function(item) { %>
+		    		<% for (var i=1; i<=10; i++) {%>
+		    	<li><img src="<%-url%><%-item%><%-resolution%><%-i%><%-extension%>"></li>
+		   		 <%} }); %>
+		  		</ul>
+			</div>
+	</script>
+
+<h1></h1>
+	<script type="text/template" id="template2">
+		<div class="resume-wrapper">
+			<h1><%-name%></h1>
+			<a  href="<%-linkSmall%>" target="_blank"><img class="foto" src="<%-linkBig%>"  width="600" height="600"   title="<%-name%>" alt="мое фото" ></a>
+			<p>Работаю  в компании <a href="<%-companyUrl%>" target="_blank"><%-companyName%></a> , <%-aboutMe%>.</p>
+			<hr/>
+			<p >Хочу учиться фронтенду потому что:</p>
+				<ul>
+			    	<% reason.forEach(function(item) { %>	
+			    		<li><%-item%></li>
+			   		 <% }); %>
+		  		</ul>
+			<hr/>
+			<p>Мой контактный телефон:</p>
+			<p class="margin"><%-phone%></p>
+			<p >Мой профиль в Facebook</p>
+			<a  href="<%-fLink%>" target="_blank">
+				<img  src="image/index.png"  width="150" height="50"   title="в Facebook" alt="фейсбук" >
+			</a>
+			<hr/>
+			<p>Мой фидбек:</p>
+			<p><%-feedBack%></p>
+		  	 
+		</div>
+	</script>
+
+</head>
+<body>
+
+		
+	
+
+
+</body>
+</html>
