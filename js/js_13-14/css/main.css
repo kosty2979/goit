@@ -1,0 +1,73 @@
+body {
+	background-color:  #668cff; 
+	font-family: arial, sans-serif;
+}
+h2 {
+	text-align: center;
+}
+.wrapper {
+	width: 80%;
+	margin: 20px auto;
+	background: white;
+	padding: 3% 0 ;
+}
+.form {
+	width: 80%;
+	margin: 0 auto;
+
+}
+.label{
+	margin-top: 15px;
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+}
+.label:hover {
+	font-weight: bold;
+}
+
+.head1 {
+	text-align: center;
+}
+.li {
+	margin-top: 40px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.button-input{
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	background-color:  #80bfff;
+	border: 3px solid #000;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin-top: 30px;
+}
+.button-input:hover {
+		background-color:  #4da6ff;
+}
+
+/*-----modal windiw----*/
+.lock {
+    overflow: hidden;
+
+}
+.shim {
+    position: fixed;
+    bottom: 0; left: 0; top: 0; right: 0;
+    background: rgba(0,0,0,0.5);
+}
+.modal{
+	position: absolute;
+	left:25%;
+	top:25%;
+	width: 50%;
+	height: 50%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius:10px;
+	padding: 20px;
+}

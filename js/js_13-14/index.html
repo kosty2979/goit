@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>js_13-14</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-2.2.2.js" type="text/javascript"></script>
+	<script src="js/lodash.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+
+	<script type="text/template" id="template">
+	<div class="wrapper">
+		<h2><%-name%></h2>
+		<div class="form">
+			<ol>
+				<% quest.forEach(function(item) { %>
+					
+					<li class="li"><%-item.title%></li>
+					<% 
+					for ( i = 0; i < item.answers.length; i++) {%>
+						<label class="label"><input class="label-input" type="radio" name="<%-item.title%>" value="<%=item.answers[i]%>"><%=item.answers[i]%></label>
+					<%}%>	
+					<%})%>
+			</ol>
+		<button class="button-input" id="checkTest" >проверить</button>
+		</div>	
+	</div>
+	<div class="lock">
+		<div class="shim">
+			<div class="modal">
+
+				<h3></h3>
+
+			</div>
+		</div>		
+	</div>		
+	</script>		
+</head>
+<body>
+<button class="button-input" id="createTest" >создать тест</button>
+
+</body>
+</html>
