@@ -56,8 +56,21 @@ function checkTest (){
 
 	if ($elements.length!=testData.quest.length) {
 			alert("Не все вопросы отмечены");
+			
+		$("li").each(function(){
+			var w=$(this).find("input:checked");
+			var e=w.length;
+			if (e==0){
+				$(this).css("color", "red");
+				$(this).find("label").each(function(){
+					$(this).css("color", "black");
+			});
 
-	
+
+
+			}
+
+	});
 			return	
 			} else {
 				for (var i=0 ; i < $elements.length; i++){
@@ -88,7 +101,10 @@ function createModal(line){
 	$(".lock ").show(500);
 	$(".shim").on("click", function(){
 	$(".lock").hide(500);
-	$('.label-input').removeAttr('checked')
+	$('.label-input').removeAttr('checked');
+
+	$("li").each(function(){
+		$(this).css("color", "black");})
 
 	})
 

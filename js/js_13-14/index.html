@@ -16,12 +16,13 @@
 			<ol>
 				<% quest.forEach(function(item) { %>
 					
-					<li class="li"><%-item.title%></li>
+					<li class="li"><%-item.title%>
 					<% 
 					for ( i = 0; i < item.answers.length; i++) {%>
 						<label class="label"><input class="label-input" type="radio" name="<%-item.title%>" value="<%=item.answers[i]%>"><%=item.answers[i]%></label>
 					<%}%>	
 					<%})%>
+				</li>
 			</ol>
 		<button class="button-input" id="checkTest" >проверить</button>
 		</div>	
