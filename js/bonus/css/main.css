@@ -1,0 +1,27 @@
+
+body {
+
+	
+	background-color: #000;
+	color: #000;
+	
+
+}
+.wrapper {
+	box-sizing: border-box;
+	font-size: 80px;
+	font-weight: bold;
+	position: absolute;
+	top:200px;
+	left: 0;
+	background-color:#6f6;	
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+
+}
+/* .wrapper:active {
+		background-color: red;
+
+} */
