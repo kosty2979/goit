@@ -1,0 +1,8 @@
+.wrap{
+	color: red;
+}
+div {
+	height: 500px;
+
+	background: linear-gradient(to top, #fefcea, #f1da36);
+}
