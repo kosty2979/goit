@@ -8,9 +8,9 @@
 
 [gulp](http://gulpjs.com/)
 
-необходимо установить gulp-cli выполнив в консоле
+необходимо установить *gulp-cli* выполнив в консоле
 
-	*npm install --global gulp-cli*
+	npm install --global gulp-cli
 
 
 
@@ -18,7 +18,7 @@
 
 после скачивания зайти в папку проекта из командной строки и набрать
 
-		*npm install*
+		npm install
 
 по команде *gulp* - будет создана папка build в которой будут папки js, css, image
 
