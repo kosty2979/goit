@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html ng-app="note-app" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NOTEPAD</title>
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.js"></script>	
+	<script type="text/javascript" src="js/app.js"></script>	
+
+</head>
+<body ng-controller="NoteCtrl">
+
+<div ng-controller="NoteCtrl" class=" wrapper">
+	<div class="container clearfix">
+		<div class="page-header">
+			<h2>NOTEPAD </h2>
+			<h3>you have {{ getTotal() }}  note.</h3>	
+		</div>
+		
+		<div class="row clearfix">
+			<div class="col-sm-4" ng-show="viewAddNote">
+	<!-- form for create new tag and new cat -->
+				<div class="form-group" ng-show="viewAddTAg">
+					<form name="formTag" 	action="" ng-submit="addTag()">
+						<i class="fa fa-times-circle fa-lg rightTop" ng-click="viewAddTAg=!viewAddTAg" ></i>
+
+						<label for="idTag">new Tag</label>
+						<input id="idTag" 	class="form-control"  required type="text"  ng-model="nameTag" placeholder="add new tag">
+						<p class="tag" ng-repeat="tag in tags track by $index">{{ tag }}<i class="fa fa-times-circle fa-lg rightTop" ng-click="delTag($index)" ></i></p>
+						<p class="direct"><button type="submit" ng-disabled="formTag.$invalid" >&nbsp<i class="fa color fa-check-circle fa-lg " ></i>&nbsp</button></p>
+					</form>
+
+					<form name="formCat" action="" ng-submit="addCat()">
+						<i class="fa fa-times-circle fa-lg rightTop" ng-click="viewAddTAg=!viewAddTAg" ></i>
+						<label for="idCat1">new importance</label>
+						<input id="idCat1" 	class="form-control"  required type="text"  ng-model="nameCat" placeholder="add new importance for notes">
+						<p class="tag" ng-repeat="cat in category track by $index">{{ cat }}<i class="fa fa-times-circle fa-lg rightTop" ng-click="delCat($index)" ></i></p>
+						<p class="direct"><button type="submit" ng-disabled="formCat.$invalid" >&nbsp<i class="fa color fa-check-circle fa-lg " ></i>&nbsp</button></p>
+					</form>
+				</div>
+	<!-- form for create note -->			
+				<div class="form-group rel clearfix"  ng-hide="viewAddTAg">
+
+					<span class="rightTop"><i ng-click="viewAddTAg = !viewAddTag" class="fa fa-pencil-square-o fa-lg" ></i>&nbsp
+					<i class="fa fa-times-circle fa-lg " ng-click="viewAddNote = !viewAddNote" ></i></span>
+
+					<form   action="" name="form" ng-submit="addNote()">
+
+						<label for="idName">note name</label>
+						<input id="idName" 	class="form-control"  required type="text"  ng-model="name" placeholder="add note name">
+
+						<label for="idCat">notes the importance of</label>
+						<select id="idCat"  class="form-control"  ng-model="catName" ng-options="cat for cat in category" value="{{ cat }}">{{ cat }}</select>
+
+						<label for="idDez">notes design</label>
+						<select id="idDez" class="form-control"  ng-model="activeClass" ng-options="class for class in className"  value="{{ class }}">{{ class }}</select>
+						
+						<label for="idText">the text notes</label>
+						<textarea id="idText" class="form-control" rows="5"  ng-model="text" placeholder="add your note "></textarea>
+
+						
+
+						<span class="labelHold" ng-repeat="tag in tags track by $index">
+						<input id="{{ tag }}" type="checkbox" ng-checked="noteTag.indexOf(tag) != -1" ng-click="toggleCheck(noteTag, tag)" value="{{ tag }}"> 
+						<label for="{{ tag }}" class="tag2">{{ tag }}</label>
+						</span>
+						  
+						<p class="direct"><button type="submit" ng-disabled="form.$invalid" >&nbsp<i  class="fa color fa-check-circle fa-lg " ></i>&nbsp</button>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-sm-2" ng-show="!viewAddNote">	
+				<i ng-click="viewAddNote = !viewAddNote" ng-hide="viewAddNote" class="fa fa-plus-circle fa-2x"></i>
+			</div>
+
+			<div class="container col-sm-8 rel clearfix">
+	<!-- note pad -->			
+				<div  class="col-sm-5 main clearfix" ng-repeat="note in notes " ng-class="note.class" {{ note.class }}>
+	<!-- some note -->				
+					<div ng-show="!note.editOn">
+						<p>
+							<span class="nameNote">{{ note.name }}  </span>
+							<span class="catNote">{{ note.cat }}</span>
+							<span class="rightTop"> <i ng-click="edit(note, $index)" class="fa fa-pencil-square-o fa-lg" ></i>&nbsp
+								<i ng-click="delNote($index)" class="fa fa-trash-o fa-lg" ></i>
+							</span>
+						</p>
+						<span class="time">{{ note.time | date:"EEEE dd MMMM, yyyy 'at' h:mma" }}</span>
+						<p class="direct">
+							<i class="fa fa-arrow-circle-down fa-lg" ng-hide="show" ng-click="show = !show"></i>
+							<i class="fa fa-arrow-circle-up fa-lg" ng-show="show"  ng-click="show = !show"></i>
+						<p>
+						<div class="inside" ng-show="show">
+							{{ note.text }}
+						</div>
+						<div ng-show="show" >
+							<p class="tag2" ng-repeat="tag in note.tags track by $index">{{ tag }}</p>
+						</div>
+					</div>
+	<!-- edit	 -->			
+					<div ng-show="note.editOn" class="clearfix">
+						<label class="nameNote" for="idNameEd">note name</label>
+						<input id="idNameEd" required type="text" class="form-control"  ng-model="note.name" >
+
+						<label for="idCatEd">notes the importance of</label>
+						<select id="idCatEd" ng-model="note.cat" class="form-control" ng-options="cat for cat in category" value="{{ cat }}">{{ cat }}</select>
+						<br>
+						<p>
+							<span class="time">{{ note.time | date:"EEEE dd MMMM, yyyy 'at' h:mma" }} </span>&nbsp <span></span>
+							<span ng-click="note.time = newTime()"><i class="fa fa-refresh" ></i></span>
+						</p>
+
+						<label for="idDezEd">notes design</label>
+						<select id="idDezEd" ng-model="note.class" class="form-control" ng-options="class for class in className" value="{{ class }} ">{{ class }}</select>
+								<br>
+						<textarea class="form-control" rows="5"  ng-model="note.text" ></textarea>
+						<div>
+
+						<!-- <p class="tag" ng-repeat="tag in tags track by $index">
+						<input class="rightTop2" type="checkbox" ng-checked="note.tags.indexOf(tag) != -1" ng-click="toggleCheck(note.tags, tag)" value="{{ tag }}"> {{ tag }}
+						</p> -->
+
+						<span class="labelHold" ng-repeat="tag in tags track by $index">
+						<input id="{{ $parent.$index+tag+$index }}" type="checkbox" ng-checked="note.tags.indexOf(tag) != -1" ng-click="toggleCheck(note.tags, tag)" value="{{ tag }}"> 
+						<label for="{{ $parent.$index+tag+$index  }}" class="tag2">{{ tag }}</label>
+						</span>
+
+
+						</div>
+						<p class="direct"><i class="fa color fa-check-circle fa-lg " ng-click="endEdit(note)"></i></p>
+						<i class="fa fa-times-circle fa-lg rightTop" ng-click="offEdit(note)" ></i>
+					</div>
+			</div>
+
+	<!-- Prewiev new Note -->			
+			<div class="abs" ng-hide="form.$invalid">
+				<div class="prevNote rel" >
+					<h3>Preview Note</h3>
+					<div  class="prev" ng-class="activeClass" {{ activeClass }}>
+						<p>
+						<span class="nameNote">{{ name }}  </span>
+							<span class="catNote">{{ catName }}</span>
+							
+						</p>
+						<span class="rightTop"> <i class="fa fa-pencil-square-o fa-lg" ></i>
+								<i class="fa fa-trash-o fa-lg" ></i>
+							</span>
+						<span class="time">{{ newTime() | date:"EEEE dd MMMM, yyyy 'at' h:mma"}}</span>
+						<p class="direct">
+							<i class="fa fa-arrow-circle-up fa-lg" ></i>
+						<p>
+							<div class="inside"> 			
+									{{ text }}
+							</div>
+						<p class="tag2" ng-repeat="tag in noteTag track by $index">{{tag}}</p>
+				</div>
+			</div>	
+		</div><!-- row -->
+	</div><!-- conteiner -->
+</div><!-- wrapper -->
+</div><!-- wrapper -->
+</div><!-- wrapper -->
+</div><!-- wrapper -->
+
+
+<div class="footer">
+	<p>It generated using the AngularJS and Bootstrap</p>
+	<p> <a class="" href="mailto:konstanting@meta.ua "> konstanting@meta.ua  </a>&nbsp&nbsp
+		<a href="https://www.linkedin.com/in/konstantingnezdilov" target="_blank" ><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png"  alt="См. профиль пользователя Konstantin Gnezdilov в LinkedIn" ></a></p>
+</div>
+</body>
+</html>
