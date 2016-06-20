@@ -21,8 +21,10 @@ function searchPartners() {
   var page = randomNum(30);
   var $block=$(".partners__wrapper");
   $block.slideUp(100);
-  var URL = "http://api.randomuser.me/?page=" + page + "&results=4";
+  var URL = "http://api.randomuser.me/?page=" + page + "&results=4&callback=?";
+
   $.getJSON(URL, function(data) {
+  
     if (data.results.length > 0) { 
       var html = $('#template2').html();
       var tmpl = _.template(html);
