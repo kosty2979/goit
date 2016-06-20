@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>final exam</title>
+
+	
+
+	<link rel="stylesheet" href="css/style_320.css">
+	<link rel="stylesheet" media="(min-width: 768px)" href="css/style_768.css">
+	<link rel="stylesheet" media="(min-width: 960px)" href="css/style_1440.css">
+
+	<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/lodash.js"></script>
+	<script type="text/javascript" src="js/masonry.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script type="text/template" id="template">
+
+	<% hits.forEach(function(item, i) { %>
+	<a class="fancyimage" data-fancybox-group="1" href="<%=item.webformatURL %>"> 						
+    <div class="grid">
+    <% if (i == 4 || i ==5 ){%>
+    	<div class="grid-item grid-item--width2">
+    <%} else{%>
+      <div class="grid-item">
+    <%}%>
+        <div class="gallery__image" style="background-image:url(<%=item.webformatURL %>);"></div>
+        <span class="gallery__text"><%=item.tags %></span>
+      </div>
+      </div>
+ 	</a>
+	<% }) %> 
+	
+
+</script>
+<script type="text/template" id="template2">
+<% results.forEach(function(item) { %>
+							
+    <div class="partners__person ">
+				<a href="#" class="partners__link">
+					<p class="partners__photo icon icon--<%= item.gender %>" style="background-image:url(<%=item.picture.large %>);"></p>
+				</a>
+				<p class="partners__name"><%= item.name.title +' <span class="firstLetter">'+item.name.first +'</span>  <span class="firstLetter">'+item.name.last+'</span>'%><p>
+				<p class="partners__info"><%='I live in <span class="firstLetter">'+item.location.city+'</span>. My email: '+ '<a class="partners__mail" href=" mailto:'+item.email+'">'+item.email+'</a>'+'. My phone number: '+ item.phone %></p>
+		</div>
+	<% }) %> 
+	
+
+</script>
+</head>
+<body>
+	<header class="header clearfix ">
+		<div class="wrapper wrapper--header">
+			<div class="header__block">
+				<a href="#" class="header__login">Log in</a>
+				<a href="#" class="header__signup">Sign Up</a>
+			</div>
+			<h2 class="header__h2">URLAUBSGLÜCK</h2>
+			<h1 class="header__h1">Share your<br>holiday dreams</h1>
+			<h4 class="header__h4">And find the perfect partner to fullfill it</h4>
+			<h3 class="header__h3"><a class="header__link" href="#partner">Find your holiday partner</a></h3>
+		</div>
+	</header>
+	<main class="main clearfix">
+		<div class="wrapper">
+			<section class="sliders clearfix">
+				<h2 class="slider__text">How Urlaubsglück works?</h2>
+				<div class="jcarousel-wrapper ">
+					<div class="jcarousel jcarousel--1">
+						<ul class="slider clearfix">
+							<li class="slider__item">
+								<p class="slider__name"><a class="slider__link" href="#">STEP 1</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+							<li class="slider__item slider__item--2">
+								<p class="slider__name"><a class="slider__link slider__link--top" href="#">STEP 2</a></p>
+								<p class="slider__first">
+									Morbi velit risus
+								</p>
+								<p class="slider__second">
+									Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+								</p>
+							</li>
+							<li class="slider__item slider__item--3">
+								<p class="slider__name"><a class="slider__link  " href="#">STEP 3</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="control-wrapper clearfix">
+						<div class="jcarousel-control-prev"><img src="image/left.png" alt="left arrow" class="sliders__arrow--left"></div>
+						<div class="jcarousel-control-next"><img src="image/right.png" alt="right arrow" class="sliders__arrow--right"></div>
+					</div>
+				</div>
+				<div class="jcarousel-wrapper jcarousel-wrapper--2">
+					<div class="jcarousel jcarousel--2">
+						<ul class="slider clearfix">
+							<li class="slider__item slider__item--2">
+								<p class="slider__name"><a class="slider__link slider__link--top" href="#">STEP 2</a></p>
+								<p class="slider__first">
+									Morbi velit risus
+								</p>
+								<p class="slider__second">
+									Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+								</p>
+							</li>
+							<li class="slider__item slider__item--3">
+								<p class="slider__name"><a class="slider__link" href="#">STEP 3</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+							<li class="slider__item">
+								<p class="slider__name"><a class="slider__link" href="#">STEP 1</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="control-wrapper clearfix">
+						<div class="jcarousel-control-prev"><img src="image/left.png" alt="left arrow" class="sliders__arrow--left"></div>
+						<div class="jcarousel-control-next"><img src="image/right.png" alt="right arrow" class="sliders__arrow--right"></div>
+					</div>
+				</div>
+				<div class="jcarousel-wrapper">
+					<div class="jcarousel jcarousel--3">
+						<ul class="slider clearfix">
+							<li class="slider__item slider__item--3">
+								<p class="slider__name"><a class="slider__link" href="#">STEP 3</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+							<li class="slider__item">
+								<p class="slider__name"><a class="slider__link" href="#">STEP 1</a></p>
+								<p class="slider__first">
+									Sed leo enim,<br>condimentum
+								</p>
+								<p class="slider__second">
+									Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+								</p>
+							</li>
+							<li class="slider__item slider__item--2">
+								<p class="slider__name"><a class="slider__link slider__link--top" href="#">STEP 2</a></p>
+								<p class="slider__first">
+									Morbi velit risus
+								</p>
+								<p class="slider__second">
+									Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="control-wrapper clearfix">
+						<div class="jcarousel-control-prev"><img src="image/left.png" alt="left arrow" class="sliders__arrow--left"></div>
+						<div class="jcarousel-control-next"><img src="image/right.png" alt="right arrow" class="sliders__arrow--right"></div>
+					</div>
+				</div>
+			</section>
+
+			<section id="partner"  class="partners clearfix">
+				<h2 class="partners__h2">Meet a partner for your best holiday</h2>
+				<div class="partners__wrapper clearfix">
+					<div class="partners__person ">
+						<a href="#" class="partners__link">
+							<p class="partners__photo icon icon--tv"></p>
+						</a>
+						<p class="partners__name">Bradley Hunter</p>
+						<p class="partners__info">Based in Chicago. I love playing tennis and loud music.</p>
+					</div>
+					<div class="partners__person ">
+						<a href="#" class="partners__link">
+							<p class="partners__photo partners__photo--2 icon icon--lab"></p>
+						</a>
+						<p class="partners__name">Lucas Marsha</p>
+						<p class="partners__info">I'm a happy person that loves cats and climbing on mountains.</p>
+					</div>
+					<div class="partners__person ">
+						<a href="#" class="partners__link">
+							<p class="partners__photo partners__photo--3 icon icon--tea"></p>
+						</a>
+						<p class="partners__name">Heather Walker</p>
+						<p class="partners__info">I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.</p>
+					</div>
+					<div class="partners__person">
+						<a href="#" class="partners__link">
+							<p class="partners__photo partners__photo--4 icon icon--plane"></p>
+						</a>
+						<p class="partners__name">Bradley Hunter</p>
+						<p class="partners__info">Based in Chicago. I love playing tennis and loud music.</p>
+					</div>
+				</div>
+				<button data-href="#partner" class="partners__seeOther">See other partners</button>
+			</section>
+
+			<section id="top__gal" class="gallery">
+				<h2 class="gallery__h2">Discover holiday activity ideas</h2>
+				<div class="gallery__pictures clearfix">
+					
+				</div>
+				<h2 class="gallery__h2 gallery__h2--bottom">Discover holiday activity ideas</h2>
+				<h4 class="gallery__h4">Hi! What are your holiday interests?</h4>
+				<form action="#" id="gallery__form" data-href="#top__gal">
+					<input type="text" class="gallery__input" id="gallery__input" placeholder="Enter your interests" />
+					<input type="submit" data-href="#top__gal" class="gallery__submit" id="gallery__submit" value="Search partners" />
+				</form>
+			</section>
+
+		</div>
+	</main>
+	<footer class="footer">
+    <div class="wrapper clearfix">
+      <h1 class="footer__name">URLAUBSGLÜCK</h1>
+      <div class="footer__companyWrapper clearfix">
+        <h2 class="footer__h2">Company</h2>
+        <ul class="footer__list">
+          <li class="footer__listItem"> <a href="#" class="footer__link">About</a> </li>
+          <li class="footer__listItem"> <a href="#" class="footer__link">Contacts</a> </li>
+          <li class="footer__listItem"> <a href="#" class="footer__link">Press</a> </li>
+          <li class="footer__listItem"> <a href="#" class="footer__link">Blog</a> </li>
+        </ul>
+      </div>
+      <h2 class="footer__h2 footer__h2--partners">Partners</h2>
+      <div class="footer__logoWrapper">
+        <h3 class="footer__h3">DESIGNED BY</h3>
+        <img src="image/logo.png" alt="Areto Development" class="footer__logo">
+      </div>
+    </div>
+</footer>
+<!-- modal window -->
+<div class="lock">
+		<div class="shim">
+			<div class="modal__new">
+
+				<h3>______</h3>
+
+			</div>
+		</div>		
+	</div>		
+
+		</body>
+		</html>

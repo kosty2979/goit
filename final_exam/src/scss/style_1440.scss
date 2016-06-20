@@ -1,0 +1,95 @@
+
+/* ------header 1440----- */
+
+.header__h2 {
+	margin-left: 14px;
+	letter-spacing: 1px;
+}
+.header__h3 {
+	width: 223px;
+}
+.header__block{
+	margin-right: 0px;
+}
+/* ----slider 1440--- */
+.jcarousel-wrapper {
+	width: 300 / 940 * 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+.jcarousel-wrapper--2 {
+	margin: 0 20 / 940 * 100%;
+}
+.control-wrapper {
+	top: 153px;
+	width: 82%;
+}
+
+.slider__item {
+	padding-top: 230px;
+}
+
+.sliders {
+	padding: 0 9px;
+}
+/* ---partners 1440---- */
+
+.partners {
+	width: 100%;
+	&__person {
+		width: 25%;
+		margin-bottom: 0;
+	}
+	&__h2 {
+		margin-bottom: 15px;
+		padding-top: 39px;
+	}
+	&__name {
+		margin: 20px 0 15px 0;
+		padding: 0;
+	}
+	&__info {
+		width: 90%;
+	}
+	&__seeOther {
+		clear: both;
+		display: block;
+		width: 21%;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+}
+/* ----gallery1440--- */
+
+.grid-item {
+	width: 31.25%;
+	margin: 1.04%;
+	&--width2 {
+		width: 64.58%;
+	}
+}
+.gallery__h2--bottom {
+	margin-top: 50px;
+}
+.gallery__input {
+	margin-left: 29%;
+	width: 237px;
+}
+	/* ---footer1440---- */
+.footer{
+	&__name {
+		margin-left:14px;
+	}
+	&__logoWrapper {
+		padding-right: 6px;  
+	}
+	&__companyWrapper{
+		margin-left: 91px;
+	}
+	&__h2{
+		margin-top: 12px;
+		&--partners {
+			margin-left: 95px;
+		}
+	}
+}	  
